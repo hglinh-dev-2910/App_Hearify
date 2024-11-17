@@ -53,20 +53,11 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                    LoginAndRegisPage()
+                    LoginConstraint(0, Modifier)
                 }
             }
         }
     }
-}
-
-@Composable
-fun LoginAndRegisPage() {
-    val configuration = LocalConfiguration.current
-    val screenHeight = configuration.screenHeightDp.dp
-    val screenWidth = configuration.screenWidthDp.dp
-
-
 }
 
 
@@ -221,12 +212,3 @@ fun LoginLayoutPreview() {
 
 
 
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun GreetingPreview() {
-    App_HearifyTheme {
-
-        LoginAndRegisPage()
-    }
-}
